@@ -1,38 +1,16 @@
 .App {
   text-align: center;
+  border: red solid 3px ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-ToDoList {
+  border: #09973f solid 3px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-NewItem {
+  border: #1613b6 solid 3px;
 }
 
-.App-header {
-  background-color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-ToDoItem {
+  border: #a8db1b solid 3px;
 }
