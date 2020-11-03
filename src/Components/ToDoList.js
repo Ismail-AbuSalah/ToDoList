@@ -4,7 +4,7 @@ import ToDoItem from "./ToDoItem";
 
 export default class ToDoList extends Component {
   render() {
-      const {delTask,taskArr}=this.props
+    const { delTask, taskArr, comTask } = this.props;
     return (
       <div className="App-ToDoList">
         {taskArr.map((elemnt, index) => (
@@ -13,6 +13,7 @@ export default class ToDoList extends Component {
             oneTask={elemnt}
             num={index}
             delTask={delTask}
+            comTask={comTask}
           />
         ))}
       </div>

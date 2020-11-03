@@ -11,26 +11,42 @@ export default class App extends Component {
         { title: "eat", isCompleted: false },
         { title: "play", isCompleted: false },
         { title: "work", isCompleted: false },
+        { title: "eat", isCompleted: false },
+        { title: "play", isCompleted: false },
+        { title: "work", isCompleted: false },
       ],
     };
   }
 
-  delTask=(num,ev) =>{
+  delTask = (num, ev) => {
     // const newArr=[...this.state.tasks]
-    console.log(this.state);
-    console.log(ev.target);
+    // console.log(this.state);
+    // console.log(ev.target);
     // console.log(ev);
-    console.log(num);
+    // console.log(num);
     // console.log(this.state.tasks.splice(num, 1));
-    this.setState(this.state.tasks.splice(num, 1))
+    this.setState(this.state.tasks.splice(num, 1));
+  };
 
-    
-  }
+  comTask = (num, ev) => {
+    this.setState(
+      this.state.tasks.map((elem, idx) => {
+        if (idx === num) {
+          elem.isCompleted = !elem.isCompleted;
+        }
+      })
+    );
+  };
+  
   render() {
     return (
       <div className="App">
         <NewItem />
-        <ToDoList taskArr={this.state.tasks} delTask={this.delTask} />
+        <ToDoList
+          taskArr={this.state.tasks}
+          delTask={this.delTask}
+          comTask={this.comTask}
+        />
       </div>
     );
   }

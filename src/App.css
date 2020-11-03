@@ -14,3 +14,11 @@
 .App-ToDoItem {
   border: #a8db1b solid 3px;
 }
+
+.com{
+  text-decoration-line: none;
+}
+
+.notcom{
+  text-decoration-line: line-through;
+}
